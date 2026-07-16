@@ -1,0 +1,14 @@
+{
+  "name": "practice-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:clients": "yarn workspace clients dev",
+    "dev:admin": "yarn workspace admin dev",
+    "build:clients": "yarn workspace clients build",
+    "build:admin": "yarn workspace admin build"
+  },
+  "packageManager": "yarn@1.22.0"
+}
