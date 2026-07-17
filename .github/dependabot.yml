@@ -10,4 +10,4 @@ updates:
     schedule:
       interval: "cron"
       cronjob: "0 9 * * *"
-    label: "admin"
+    labels: "admin"
