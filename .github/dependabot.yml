@@ -9,6 +9,6 @@ updates:
     directory: "/apps/admin" # Location of package manifests
     schedule:
       interval: "cron"
-      cron: "0 9 * * *"
+      cronjob: "0 9 * * *"
     labels: 
       - "admin"
