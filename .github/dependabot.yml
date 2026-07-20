@@ -8,7 +8,31 @@ updates:
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/apps/admin" # Location of package manifests
     schedule:
-      interval: "cron"
-      cronjob: "0 9 * * *"
+      interval: "weekly"
+      day: "wednesday"
+      time: "09:00"
+      timezone: "Europe/London"
     labels: 
       - "admin"
+    groups:
+      production:
+        dependency-type: "production"
+    
+      development:
+        dependency-type: "development"
+      
+  - package-ecosystem: "npm" # See documentation for possible values
+    directory: "/apps/clients" # Location of package manifests
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
+      time: "09:00"
+      timezone: "Europe/London"
+    labels: 
+      - "client"
+    groups:
+      production:
+        dependency-type: "production"
+    
+      development:
+        dependency-type: "development"
