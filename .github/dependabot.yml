@@ -15,13 +15,27 @@ updates:
     labels: 
       - "admin"
     groups:
+      production-major:
+        dependency-type: "production"
+        update-types:
+          - "major"
+
       production:
         dependency-type: "production"
-        update-types: ["patch", "minor"]
+        update-types: 
+          - "patch"
+          - "minor"
+
+      development-major:
+        dependency-type: "development"
+        update-types:
+          - "major"
     
       development:
         dependency-type: "development"
-        update-types: ["patch", "minor"]
+        update-types: 
+          - "patch"
+          - "minor"
       
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/apps/clients" # Location of package manifests
